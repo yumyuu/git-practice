@@ -1,18 +1,18 @@
 ### 說明 blob, tree, commit, branch, head 分別是什麼
-* blob :
+* Blob :
     Blob（Binary Large Object）是 Git 中用於儲存檔案內容的物件。每個 Blob 都表示一個檔案的原始數據（例如文字文件的內容），不包含檔名或其他元數據。Blob 是唯一的，基於內容的哈希值（SHA-1）來識別。
 
-* tree : 
+* Tree : 
     Tree 是 Git 中用於表示目錄結構的物件。它包含了對多個 Blob 和其他 Tree 的引用，每個引用還包含檔名和檔案的模式（例如檔案或目錄）。Tree 使 Git 能夠建立整個專案的目錄和子目錄的結構。
 
-* commit : 
+* Commit : 
     Commit 是 Git 中儲存項目狀態（snapshot）的物件。每個 Commit 包含了一個 Tree（表示專案的整個檔案系統快照）且包含本次提交的作者等相關附屬資訊和包含零個或多個指向該提交物件的父物件指標：首次提交是沒有直接祖先的，普通提交有一個祖先，由兩個或多個分支合併產生的提交則有多個祖先。
 
-* branch : 
+* Branch : 
     Branch 是 Git 中對 Commit 的可變指針。它代表了開發歷史中的一個獨立線，指向特定的 Commit，可以創建和切換到其他分支來進行並行開發。
 
-* head : 
-    HEAD 是一個特殊的指標，指向目前檢出的分支或特定的 Commit。通常HEAD 指向當前分支的最新 Commit，也可以指向一個特定的 Commit（稱為 "detached HEAD" 狀態。
+* HEAD : 
+    HEAD 是一個特殊的指標，指向目前檢出的分支或特定的 Commit。通常HEAD 指向當前分支的最新 Commit，也可以指向一個特定的 Commit (稱為 "detached HEAD" 狀態)
 
 ![image error](https://willh.gitbook.io/~gitbook/image?url=http%3A%2F%2Fgit-scm.com%2Ffigures%2F18333fig0301-tn.png&width=400&dpr=3&quality=100&sign=7b91bda7&sv=1)
 
@@ -25,7 +25,7 @@
 
 * 初始化儲存庫 git init：
     
-    建立 .git 目錄，其中包含一些子目錄如 objects、refs 和初始設定檔 HEAD。
+    >建立 .git 目錄，其中包含一些子目錄如 objects、refs 和初始設定檔 HEAD。
 
 * 添加檔案 git add：
     
@@ -44,11 +44,11 @@
 
 * 創建分支 git branch：
 
-    在 .git/refs/heads/ 中創建一個新的檔案，這個檔案包含一個指向特定 Commit 的 SHA-1 值。
+    >在 .git/refs/heads/ 中創建一個新的檔案，這個檔案包含一個指向特定 Commit 的 SHA-1 值。
 
 * 切換分支 git checkout：
 
-    更新 .git/HEAD 指向新的分支，並且更新工作目錄和暫存區內容以匹配新的分支狀態。
+    >更新 .git/HEAD 指向新的分支，並且更新工作目錄和暫存區內容以匹配新的分支狀態。
 
 ---
 
