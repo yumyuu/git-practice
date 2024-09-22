@@ -7,7 +7,7 @@
     
     nvm (Node Version Manager)是 Node.js 版本管理工具，允許開發者在同一台電腦上安裝和切換多個版本的 Node.js
 
-    > 1. 可以安裝不同版本的 Node.js
+      1. 可以安裝不同版本的 Node.js
 
       2. 版本切換： 可以切換到不同的 Node.js 版本來匹配不同項目的需求，而不會影響到全局環境中的其他項目
 
@@ -22,7 +22,7 @@
     ```nvm use <version> #使用指定版本的 Node.js(切換到剛剛下載 v22.9.0版本)```
 
     ```nvm alias default <version> #設置預設版本```
-    
+
     ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw2-js/1.png)
 
     >結論: nvm 的主要用途是為了解決 Node.js 不同版本的兼容性問題 用來管理和切換
