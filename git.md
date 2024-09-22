@@ -1,36 +1,39 @@
 ### 說明 blob, tree, commit, branch, head 分別是什麼
 * Blob :
-
+    ``` 
     Blob（Binary Large Object）是 Git 中用於儲存檔案內容的物件。
-    每當git add檔案的時候，就會產生一個blob物件，這個物件會紀錄檔案的內容，但不會紀錄檔名或其他元數據且Blob 是唯一的，基於內容的哈希值（SHA-1）來識別。
 
+    每當git add檔案的時候，就會產生一個blob物件，這個物件會紀錄檔案的內容，但不會紀錄檔名或其他元數據且Blob 是唯一的，基於內容的哈希值（SHA-1）來識別。
+    ``` 
     ``` $ git cat-file -t <sha-1 value>  #顯示該sha1 value是屬於那一種物件 ```
+
     ```   $ git cat-file -p <sha-1 value>  #顯示該sha1 value物件的內容 ```
     
 * Tree : 
-
+    ``` 
     Tree 是 Git 中用於表示目錄結構的物件，包含了對多個 Blob 和其他 Tree 的引用，每個引用還包含檔名和檔案的模式（例如檔案或目錄）。
-    Tree 使 Git 能夠建立整個專案的目錄和子目錄的結構。
-    拿自己下面的範例(紀錄在 git repo 操作過程中的範例)測試的結果:
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/8.png)
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/9.png)
+    Tree 使 Git 能夠建立整個專案的目錄和子目錄的結構。
+    ``` 
+    拿自己下面的範例(紀錄在 git repo 操作過程中的範例)測試的結果:
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/8.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/9.png)
 
     補充: 100644 代表普通檔案
 
 * Commit : 
-
+    ``` 
     Commit 是 Git 中儲存項目狀態（snapshot）的物件。
     每個 Commit 包含了一個 Tree（表示專案的整個檔案系統快照）且包含本次提交的作者等相關附屬資訊和包含零個或多個指向該提交物件的父物件指標：首次提交是沒有直接祖先的，普通提交有一個祖先，由兩個或多個分支合併產生的提交則有多個祖先。
+    ``` 
     一樣拿自己下面的範例(紀錄在 git repo 操作過程中的範例)測試的結果:
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/10.png)
-
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/11.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/10.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/11.png)
 
 Blob、Tree、Commit三者結構圖如下:
 
-![image error](https://willh.gitbook.io/~gitbook/image?url=http%3A%2F%2Fgit-scm.com%2Ffigures%2F18333fig0301-tn.png&width=400&dpr=3&quality=100&sign=7b91bda7&sv=1)
+>![image error](https://willh.gitbook.io/~gitbook/image?url=http%3A%2F%2Fgit-scm.com%2Ffigures%2F18333fig0301-tn.png&width=400&dpr=3&quality=100&sign=7b91bda7&sv=1)
 
 [圖片參考連結:https://willh.gitbook.io/gitpro/3b1652ba27b78115eac23a4bb00ea4fa/454151609d0dce25849055ce6b02c0bc](https://willh.gitbook.io/gitpro/3b1652ba27b78115eac23a4bb00ea4fa/454151609d0dce25849055ce6b02c0bc)
 
@@ -50,10 +53,10 @@ Blob、Tree、Commit三者結構圖如下:
 
     執行 ```git init ``` 初始化repo
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/1.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/1.png)
 
     建立 .git 目錄，其中包含一些子目錄如 objects、refs 和初始設定檔 HEAD。
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/2.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/2.png)
 
     其中objects 目錄裡面有 pack 和 info 子層的空目錄
     ```
@@ -66,7 +69,7 @@ Blob、Tree、Commit三者結構圖如下:
 
     執行 ```git add test.txt ``` 創建並加入一個test.txt至暫存區
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/3.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/3.png)
 
     觀察到objects內多了一個資料夾e6，內容如下:
     
@@ -76,7 +79,7 @@ Blob、Tree、Commit三者結構圖如下:
     ```
     使用 ```git hash-object test.txt```確認內容
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/4.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/4.png)
 
     使用 ```git cat-file -t e69de2``` -t會輸出該物件的type
 
@@ -89,11 +92,11 @@ Blob、Tree、Commit三者結構圖如下:
 
     執行 ```git commit -m "Add test.txt" ```
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/5.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/5.png)
 
     目錄下多了logs、refs、COMMIT_EDITMSG、index
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/7.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/7.png)
     ```
         .git/
     ├── HEAD  # 如果是第一次提交,內容會變為具體的 commit hash
@@ -130,7 +133,7 @@ Blob、Tree、Commit三者結構圖如下:
 
     且觀察到objects內又多兩個資料夾5e和dc
 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/6.png)
+    >![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw1-git/6.png)
 
     結論:
 
