@@ -19,9 +19,12 @@ export default class Stack {
   // 移除並回傳 stack 頂部的元素
   pop() {
 		// TODO
+    if(this.#items.length!=0){
         let pop_val = this.#items[this.#items.length-1];
         this.#items.length = this.#items.length-1; 
         return pop_val;
+    }
+    return null;
   }
 
   // 回傳 stack 頂部的元素，但不移除它

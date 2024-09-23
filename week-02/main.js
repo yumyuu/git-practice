@@ -29,18 +29,16 @@ stack.print();//null
 
 //2. 確認一些例外狀況
 //例如 clear後再pop 會輸出甚麼
-/*
 stack.pop();
 stack.print();
-*/
-//有問題 要再處理
+//有問題 要再Stack 多做判斷處理
 
 //push null值 會怎麼樣
 stack.push(null)
 stack.print();
 
-//大量數據測試 先用100(雖然有點小)試試看...
-for(let i=0; i<100; i++){
+//大量數據測試 先用10000(雖然不夠大)但試試看...
+for(let i=0; i<10000; i++){
     stack.push(i);
 }
 stack.print();
