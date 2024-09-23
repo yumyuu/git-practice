@@ -48,7 +48,6 @@
 
     ```npm init ls #初始化專案的 package.json文件```
         
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw2-js/2.png) 
-    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw2-js/3.png)     
+    ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw2-js/2.png)   
 
     >結論: npm 用來管理和安裝 JavaScript套件 的工具，使得套件的依賴和管理變得簡單和可追蹤
