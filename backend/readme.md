@@ -37,8 +37,8 @@
     npm run test    # 執行 "test" 腳本
     npm run build   # 執行 "build" 腳本
 ```
-<br>
-- Port number 要怎麼以環境變數來設定？<br><br>
+
+- Port number 要怎麼以環境變數來設定？
  app.js 宣告中加入 
 ```port = process.env.PORT || 3000;``` 
  且在 package.json 加入 
