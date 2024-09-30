@@ -32,7 +32,11 @@ stack.print();//null
 stack.pop();
 stack.print();
 //有問題 要再Stack 多做判斷處理
+console.log("3");
 
+stack.peek();
+console.log("3");
+/*
 //push null值 會怎麼樣
 stack.push(null)
 stack.print();
@@ -41,4 +45,4 @@ stack.print();
 for(let i=0; i<10000; i++){
     stack.push(i);
 }
-stack.print();
+stack.print();*/
