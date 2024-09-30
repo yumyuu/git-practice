@@ -51,7 +51,6 @@
  ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw3-express/5.png)
 
 - 關於哪些檔案應該要被放上 github repo 這個問題，描述看看為什麼你選擇上傳某些檔案、選擇不上傳某些檔案，決策的要素是什麼？
-<br>
 
     * 選擇不上傳的檔案: 
         * node_modules 資料夾 ( 因為可以根據 package.json 重新生成，上傳會浪費空間 )
