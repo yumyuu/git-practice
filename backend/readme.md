@@ -6,9 +6,7 @@
     指令實作: ``` npm i --save lodash ``` ( 用 lodash當作例子 )<br>
     ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw3-express/3.png)
 
-    使用在**已經發布**的環境下，是指發布後仍然需要依賴使用的 plug-in
-    
-    <br>
+    使用在**已經發布**的環境下，是指發布後仍然需要依賴使用的 plug-in<br>
     * **devDependencies:**<br>
     > ```官方說法:  Packages that are only needed for local development and testing. ```<br>
     
@@ -42,9 +40,9 @@
 <br>
 - Port number 要怎麼以環境變數來設定？<br><br>
  app.js 宣告中加入 
-        ```port = process.env.PORT || 3000;``` 
+    ```port = process.env.PORT || 3000;``` 
  且在 package.json 加入 
-        ```"scripts": { "start": "node app.js" }```
+    ```"scripts": { "start": "node app.js" }```
         
  即可用命令列修改   ```set PORT=4000 && npm start``` (已在 app.js實作)<br>
  
