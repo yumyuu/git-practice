@@ -40,9 +40,9 @@
 <br>
 - Port number 要怎麼以環境變數來設定？<br><br>
  app.js 宣告中加入 
-    ```port = process.env.PORT || 3000;``` 
+```port = process.env.PORT || 3000;``` 
  且在 package.json 加入 
-    ```"scripts": { "start": "node app.js" }```
+```"scripts": { "start": "node app.js" }```
         
  即可用命令列修改   ```set PORT=4000 && npm start``` (已在 app.js實作)<br>
  
@@ -67,7 +67,7 @@
 - 範例程式中用 require，但上週的 Stack 是用 import/export，這兩種分別是 JavaScript 引用模組的兩種方式: CJS vs ESM，這兩者分別怎麼用？
 
     * **require** 是 Node.js 中的 CommonJS (CJS) 模組系統，主要用於同步加載模組<br>
-    (舊版 Node.js 及傳統 JavaScript 開發中常用)<br><br>
+    (舊版 Node.js 及傳統 JavaScript 開發中常用)
     
     * **import/export** ES6 的模組語法 (ESM)，更現代化，支持靜態分析和 Tree Shaking<br>
     (現代瀏覽器及 Node.js >=12 支持)
