@@ -15,26 +15,26 @@
 
     * **反向代理 ( Reverse Proxy )**
 
-    第五題和 Forward Proxy 一起深入說明
+        第五題和 Forward Proxy 一起深入說明
 
     * **負載均衡 ( Load Balance )**
 
-    為了因應大流量，一台 Application Server 是無法應付的，因此會需要同時開多個 Application Server 。
-    而 Nginx 能夠自動的將 Client 的 Request 分送到不同 Application Server 上
+        為了因應大流量，一台 Application Server 是無法應付的，因此會需要同時開多個 Application Server 。
+        而 Nginx 能夠自動的將 Client 的 Request 分送到不同 Application Server 上
 
     * **HTTP 快取**
 
-    為了能夠提高效能，Nginx 會利用 http 快取的機制做優化。流程如下：
+        為了能夠提高效能，Nginx 會利用 http 快取的機制做優化。流程如下：
 
-    Client 發出 Request ，Nginx 會將 Request 的資訊做 hash，並判斷此 hash key 是否存在於記憶體中：1 -> 2
+        Client 發出 Request ，Nginx 會將 Request 的資訊做 hash，並判斷此 hash key 是否存在於記憶體中：1 -> 2
 
-    若 hash key 不存在於記憶體中：Nginx 會向 Application Server 索取檔案位置，再去索取檔案。 3 -> 4 -> 5
+        若 hash key 不存在於記憶體中：Nginx 會向 Application Server 索取檔案位置，再去索取檔案。 3 -> 4 -> 5
 
-    若存在於記憶體中：Nginx 會直接索取檔案。 3 -> 5
+        若存在於記憶體中：Nginx 會直接索取檔案。 3 -> 5
 
-    將檔案回傳給 Client。 6 
+        將檔案回傳給 Client。 6 
             
-    ( 網路查到的資料，解釋的很棒且非常清楚 )
+        ( 網路查到的資料，解釋的很棒且非常清楚 )
 
     ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw4-ec2/2.png)
     圖片參考連結: [https://explainthis.s3-ap-northeast-1.amazonaws.com/9d832c7970954e99ab1bcc0335f0d629.png](https://explainthis.s3-ap-northeast-1.amazonaws.com/9d832c7970954e99ab1bcc0335f0d629.png)
@@ -86,7 +86,8 @@
         proxy_pass http://localhost:3000; #將請求轉發到本地運行的 Express Server
 
     }
-    }```
+    }
+    
 
 * **7. Security Group 是什麼？用途為何？有什麼設定原則嗎？**
 
@@ -94,10 +95,10 @@
 
     * 設定原則：
     
-    安全組的設置應根據應用需求限制允許的 IP 和 Port， 其他不必要的端口就可以關閉以提高安全性
+        安全組的設置應根據應用需求限制允許的 IP 和 Port， 其他不必要的端口就可以關閉以提高安全性
 
-    例如: 任何地方-IPv4 — 在 0.0.0.0/0 塊 IPv4CIDR ( 允許來自所有IPv4位址的流量 )<br>
-    任何地方 IPv6- 的:: /0 塊 IPv6CIDR ( 允許來自所有IPv6位址的流量 )
+        例如: 任何地方-IPv4 — 在 0.0.0.0/0 塊 IPv4CIDR ( 允許來自所有IPv4位址的流量 )<br>
+        任何地方 IPv6- 的:: /0 塊 IPv6CIDR ( 允許來自所有IPv6位址的流量 )
 
     ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw4-ec2/4.png)
 
