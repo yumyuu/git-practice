@@ -8,7 +8,7 @@
 
 * **3. DNS 的 A record 是什麼？**
 
-  A record 指的是我們看到的網址，例如 www.google****.com.tw，直接針對這完整的網域指定一個 IP，好處是子網域不用架設任何的 DNS Server
+  A record 指的是我們看到的網址，例如 `www.google.com.tw`，直接針對這完整的網域指定一個 IP，好處是子網域不用架設任何的 DNS Server
 
 * **4. DNS 的 NS record 是什麼？**
 
@@ -18,11 +18,11 @@
     
   * **Domain Name**
 
-    域名，是網站的名稱，例如 example.com。
+    域名，是網站的名稱，例如 `example.com`。
 
   * **FQDN（Fully Qualified Domain Name )**
     
-    FQDN（Fully Qualified Domain Name）：完全合格域名，是包含完整路徑的域名， 例如 www.example****.com
+    FQDN（Fully Qualified Domain Name）：完全合格域名，是包含完整路徑的域名， 例如 `www.example.com`
 
   * **URL**
 
