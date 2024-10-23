@@ -8,7 +8,7 @@
 
 * **3. DNS 的 A record 是什麼？**
 
-  A record 指的是我們看到的網址，例如 www.google.com.tw，直接針對這完整的網域指定一個 IP，好處是子網域不用架設任何的 DNS Server
+  A record 指的是我們看到的網址，例如 www.google****.com.tw，直接針對這完整的網域指定一個 IP，好處是子網域不用架設任何的 DNS Server
 
 * **4. DNS 的 NS record 是什麼？**
 
@@ -22,7 +22,7 @@
 
   * **FQDN（Fully Qualified Domain Name )**
     
-    FQDN（Fully Qualified Domain Name）：完全合格域名，是包含完整路徑的域名， 例如 www.example.com
+    FQDN（Fully Qualified Domain Name）：完全合格域名，是包含完整路徑的域名， 例如 www.example****.com
 
   * **URL**
 
@@ -30,7 +30,7 @@
 
 * **6. 為什麼應該要為網站加上憑證？而不是直接用 http 就好？**
 
-HTTP 是未加密的，容易被攻擊， SSL 憑證可以加密資料傳輸，保護用戶隱私，確保資料不被竄改或攔截。
+  HTTP 是未加密的，容易被攻擊， SSL 憑證可以加密資料傳輸，保護用戶隱私，確保資料不被竄改或攔截。
 
 
 參考資料:
