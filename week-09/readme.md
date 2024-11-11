@@ -8,7 +8,7 @@
   ```sudo nginx -t```
   發現 nginx.conf 內的第八行多了 ; 
 
-![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw9-troubleshooting/2.png)
+  ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw9-troubleshooting/2.png)
 
 * **2.** 
   ![image error](https://github.com/yumyuu/git-practice/blob/main/image/hw9-troubleshooting/3.png)
